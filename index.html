@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLANA MAX (SMAX) | Maximum Yield. Maximum Security.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Solana Palette */
+            --primary-color: #9945FF; /* Solana Purple */
+            --secondary-color: #FF9900; /* Solana Orange */
+            /* Dark Theme */
+            --dark-bg: #0A0A0A;
+            --mid-bg: #1A1A1A;
+            --light-bg: #2A2A2A;
+            --text-light: #F0F0F0;
+            --text-dim: #BBBBBB;
+            --gradient-main: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            text-align: left;
+            direction: ltr; 
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* HERO SECTION STYLING (The main banner/header) */
+        .hero {
+            /* Placeholder for a dark, subtle background pattern/image */
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            flex-direction: column;
+            padding: 40px 20px;
+            color: #FFFFFF;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6); 
+            z-index: 1; 
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        .hero .logo {
+            width: 180px; 
+            height: auto;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 15px var(--primary-color)); 
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.3em;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+        .hero .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .button {
+            display: inline-flex; 
+            align-items: center;
+            justify-content: center;
+            padding: 14px 30px;
+            background: var(--gradient-main);
+            color: var(--dark-bg);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: none;
+            cursor: pointer;
+        }
+        .button.secondary {
+            background: var(--mid-bg);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            box-shadow: none;
+        }
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+
+        /* GENERAL SECTION STYLING */
+        .section {
+            padding: 60px 20px;
+            background-color: var(--mid-bg);
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+        .section.dark {
+            background-color: var(--light-bg);
+        }
+        h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+        h3 {
+            font-size: 1.8em;
+            color: var(--secondary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        p, ul, ol {
+            font-size: 1.1em;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+        li::before {
+            content: "✦"; 
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
+        }
+        ol {
+            padding-left: 25px;
+        }
+        ol li::before {
+             content: none;
+        }
+
+        /* FOOTER STYLING */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 30px;
+            background-color: var(--light-bg);
+            border-radius: 10px 10px 0 0; /* Rounded top corners */
+            color: var(--text-dim);
+        }
+        .footer .social-links {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .footer .social-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        .footer .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .button {
+                width: 100%;
+                margin: 5px 0;
+            }
+            h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-content">
+        <img src="logo.png" alt="Solana Max Logo" class="logo">
+        <h1>SOLANA MAX (SMAX)</h1>
+        <p>Maximum Yield. Maximum Security. The Next Generation of Solana Power.</p>
+        <div class="buttons">
+            <a href="#" class="button">Buy SMAX (Raydium Link)</a>
+            <a href="#" class="button secondary">Download Whitepaper (PDF)</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section">
+        <h2>🔒 Max Security: The Trust Pledge</h2>
+        <p>The SMAX project is built on three key principles to ensure investor safety and long-term value:</p>
+        <ul>
+            <li><strong>100% LP Burn:</strong> Initial liquidity pool tokens are **100% sent to the irreversible Burn Address** post-launch. This eliminates the risk of "Rug Pulls." (Burn Transaction Link Here)</li>
+            <li><strong>Immutable Contract:</strong> The token contract, built on SPL Token-2022, is immutable. The **Mint Authority is permanently revoked.** No new tokens can ever be created.</li>
+            <li><strong>Transparent Team Allocation:</strong> The 25% team token allocation will be locked and vested over a specified period [e.g., 6 months] to ensure commitment.</li>
+        </ul>
+    </div>
+
+    <div class="section dark">
+        <h2>📊 SMAX Tokenomics: 100 Billion Supply</h2>
+        <p>The total supply of SMAX is One Hundred Billion (100,000,000,000) tokens. Our deflationary model is designed for sustained growth:</p>
+        <ul>
+            <li><strong>1% Transaction Tax (Buyback & Burn):</strong> A 1% tax on every transaction is used for market buybacks and subsequent token burning, creating constant buying pressure and reducing circulating supply.</li>
+            <li><strong>50% Allocation:</strong> Initial Liquidity Pool (LP) - Burnt.</li>
+            <li><strong>25% Allocation:</strong> Team / Taxes - Locked/Vested.</li>
+            <li><strong>25% Allocation:</strong> Treasury Reserve - For future airdrops, marketing, and ecosystem growth.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🗺️ Roadmap to the Max</h2>
+        <p>Our phased plan to establish SMAX as a premier DeFi utility token on the Solana network:</p>
+        <ol>
+            <li>**Phase 1: Secure Launch** - Token creation, LP burn, website launch, social media presence, and initial community growth.</li>
+            <li>**Phase 2: Market Integration** - Application for listing on CoinGecko & CoinMarketCap, influencer campaigns, and establishing key partnerships.</li>
+            <li>**Phase 3: Utility Development** - Launching a simple staking dashboard or holder-gated utility (e.g., voting platform or simple trading tools).</li>
+            <li>**Phase 4: Max Ecosystem** - Further decentralization and exploring integration with other Solana DeFi primitives.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Solana Max. All rights reserved.</p>
+    <div class="social-links">
+        <a href="#">Telegram</a> | <a href="#">Twitter (X)</a>
+    </div>
+</div>
+</body>
+</html>
