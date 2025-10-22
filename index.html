@@ -143,4 +143,136 @@
             color: var(--secondary-color);
             margin-top: 30px;
             margin-bottom: 15px;
-            font-weight
+            font-weight: 600;
+        }
+        p, ul, ol {
+            font-size: 1.1em;
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+        li::before {
+            content: "✦"; 
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2em;
+        }
+        ol {
+            padding-left: 25px;
+        }
+        ol li::before {
+             content: none;
+        }
+
+        /* FOOTER STYLING */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 30px;
+            background-color: var(--light-bg);
+            border-radius: 10px 10px 0 0; 
+            color: var(--text-dim);
+        }
+        .footer .social-links {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .footer .social-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        .footer .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .button {
+                width: 100%;
+                margin: 5px 0;
+            }
+            h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-content">
+        <img src="logo.png" alt="Solana Max Logo" class="logo">
+        
+        <h1>SOLANA MAX (SMAX)</h1>
+        <p>Maximum Yield. Maximum Security. The Next Generation of Solana Power.</p>
+        <div class="buttons">
+            <a href="#" class="button">Buy SMAX (Raydium Link)</a>
+            
+            <a href="Solana Max.pdf" target="_blank" class="button secondary">Download Whitepaper (PDF)</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section">
+        <h2>🔒 Max Security: The Trust Pledge</h2>
+        <p>The SMAX project is built on three key principles to ensure investor safety and long-term value:</p>
+        <ul>
+            <li><strong>100% LP Burn:</strong> Initial liquidity pool tokens are <strong>100% sent to the irreversible Burn Address</strong> post-launch. This eliminates the risk of "Rug Pulls." (Burn Transaction Link Here)</li>
+            <li><strong>Immutable Contract:</strong> The token contract, built on SPL Token-2022, is immutable. The <strong>Mint Authority is permanently revoked.</strong> No new tokens can ever be created.</li>
+            <li><strong>Transparent Team Allocation:</strong> The 25% team token allocation will be locked and vested over a specified period [e.g., 6 months] to ensure commitment.</li>
+        </ul>
+    </div>
+
+    <div class="section dark">
+        <h2>📊 SMAX Tokenomics: 100 Billion Supply</h2>
+        <p>The total supply of SMAX is One Hundred Billion (100,000,000,000) tokens. Our deflationary model is designed for sustained growth:</p>
+        <ul>
+            <li><strong>1% Transaction Tax (Buyback & Burn):</strong> A 1% tax on every transaction is used for market buybacks and subsequent token burning, creating constant buying pressure and reducing circulating supply.</li>
+            <li><strong>50% Allocation:</strong> Initial Liquidity Pool (LP) - Burnt.</li>
+            <li><strong>25% Allocation:</strong> Team / Taxes - Locked/Vested.</li>
+            <li><strong>25% Allocation:</strong> Treasury Reserve - For future airdrops, marketing, and ecosystem growth.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🗺️ Roadmap to the Max</h2>
+        <p>Our phased plan to establish SMAX as a premier DeFi utility token on the Solana network:</p>
+        <ol>
+            <li><strong>Phase 1: Secure Launch</strong> - Token creation, LP burn, website launch, official Whitepaper release, social media presence.</li>
+            <li><strong>Phase 2: Market Integration</strong> - Application for listing on CoinGecko & CoinMarketCap, influencer campaigns, and establishing key partnerships.</li>
+            <li><strong>Phase 3: Utility Development</strong> - Launching a simple staking dashboard or holder-gated utility (e.g., voting platform or simple trading tools).</li>
+            <li><strong>Phase 4: Max Ecosystem</strong> - Further decentralization and exploring integration with other Solana DeFi primitives.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Solana Max. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://t.me/SolanaMaxOfficial" target="_blank">Telegram</a> | 
+        
+        <a href="https://x.com/solanamax_smax" target="_blank">Twitter (X)</a>
+    </div>
+</div>
+</body>
+</html>
