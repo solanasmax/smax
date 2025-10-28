@@ -1,278 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOLANA MAX (SMAX) | Maximum Yield. Maximum Security.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            /* Solana Palette */
-            --primary-color: #9945FF; /* Solana Purple */
-            --secondary-color: #FF9900; /* Solana Orange */
-            /* Dark Theme */
-            --dark-bg: #0A0A0A;
-            --mid-bg: #1A1A1A;
-            --light-bg: #2A2A2A;
-            --text-light: #F0F0F0;
-            --text-dim: #BBBBBB;
-            --gradient-main: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            text-align: left;
-            direction: ltr; 
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        /* HERO SECTION STYLING (The main banner/header) */
-        .hero {
-            /* Placeholder for a dark, subtle background pattern/image */
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            flex-direction: column;
-            padding: 40px 20px;
-            color: #FFFFFF;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.6); 
-            z-index: 1; 
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-        }
-        .hero .logo {
-            width: 180px; 
-            height: auto;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 15px var(--primary-color)); 
-        }
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 15px;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-        }
-        .hero p {
-            font-size: 1.3em;
-            color: var(--text-light);
-            margin-bottom: 40px;
-            font-weight: 600;
-        }
-        .hero .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .button {
-            display: inline-flex; 
-            align-items: center;
-            justify-content: center;
-            padding: 14px 30px;
-            background: var(--gradient-main);
-            color: var(--dark-bg);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1.1em;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            border: none;
-            cursor: pointer;
-        }
-        .button.secondary {
-            background: var(--mid-bg);
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-            box-shadow: none;
-        }
-        .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-        }
-
-        /* GENERAL SECTION STYLING */
-        .section {
-            padding: 60px 20px;
-            background-color: var(--mid-bg);
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.2);
-        }
-        .section.dark {
-            background-color: var(--light-bg);
-        }
-        h2 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 40px;
-            background: var(--gradient-main);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 700;
-        }
-        h3 {
-            font-size: 1.8em;
-            color: var(--secondary-color);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-        p, ul, ol {
-            font-size: 1.1em;
-            color: var(--text-dim);
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 15px;
-        }
-        li::before {
-            content: "✦"; 
-            color: var(--secondary-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 0;
-            font-size: 1.2em;
-        }
-        ol {
-            padding-left: 25px;
-        }
-        ol li::before {
-             content: none;
-        }
-
-        /* FOOTER STYLING */
-        .footer {
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 30px;
-            background-color: var(--light-bg);
-            border-radius: 10px 10px 0 0; 
-            color: var(--text-dim);
-        }
-        .footer .social-links {
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-        .footer .social-links a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s ease;
-        }
-        .footer .social-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5em;
-            }
-            .hero p {
-                font-size: 1em;
-            }
-            .button {
-                width: 100%;
-                margin: 5px 0;
-            }
-            h2 {
-                font-size: 2em;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Solana Max — SMAX</title>
+  <meta name="description" content="Solana Max (SMAX) — community-driven token on Solana." />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <style>
+    :root{
+      --bg:#071022; --card:#0f1724; --accent:#00d1b2; --muted:#9fb0be; --glass: rgba(255,255,255,0.03);
+      --accent-2:#7c5cff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+    body{background:linear-gradient(180deg,#031022 0%, #06142a 100%);color:#e6eef6;line-height:1.45}
+    .container{max-width:1100px;margin:28px auto;padding:20px}
+    header{display:flex;align-items:center;gap:16px}
+    img.logo{width:72px;height:72px;border-radius:12px;object-fit:cover;border:1px solid rgba(255,255,255,0.04)}
+    h1{margin:0;font-size:30px}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:22px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.6)}
+    .btn{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:#02141a;padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:700}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:10px 12px;border-radius:10px}
+    .muted{color:var(--muted);font-size:14px}
+    .section{margin-top:18px}
+    .tokenomics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    footer{color:var(--muted);text-align:center;padding:20px;margin-top:32px}
+    @media (max-width:920px){.grid{grid-template-columns:1fr}.card{padding:14px}}
+  </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <img class="logo" src="logo.png" alt="SMAX logo" />
+      <div>
+        <h1>Solana Max <small style="color:var(--muted);font-size:14px">($SMAX)</small></h1>
+        <div class="subtitle">Community-driven token on Solana — audited, multi-stage launch, anti-dump mechanisms.</div>
+      </div>
+    </header>
 
-<div class="hero">
-    <div class="hero-content">
-        <img src="logo.png" alt="Solana Max Logo" class="logo">
-        
-        <h1>SOLANA MAX (SMAX)</h1>
-        <p>Maximum Yield. Maximum Security. The Next Generation of Solana Power.</p>
-        <div class="buttons">
-            <a href="#" class="button">Buy SMAX (Raydium Link)</a>
-            
-            <a href="Solana Max.pdf" target="_blank" class="button secondary">Download Whitepaper (PDF)</a>
+    <div class="grid">
+      <!-- LEFT -->
+      <main>
+        <div class="card">
+          <h2>About Solana Max (SMAX)</h2>
+          <p class="muted" style="margin-top:8px">
+            Solana Max (SMAX) is a community-first token built on Solana. The project focuses on fair distribution, long-term sustainability, and mechanisms to prevent early dumps and bot-driven price manipulation. This site and token metadata are maintained in our official GitHub repository.
+          </p>
+
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn" onclick="copyMint()">Copy Mint Address</button>
+            <a class="btn-ghost" href="https://raw.githubusercontent.com/solanasmax/smax/main/metadata.json" target="_blank">View metadata.json</a>
+            <a class="btn-ghost" href="https://solanasmax.github.io/smax/" target="_blank">Official Site</a>
+            <a class="btn-ghost" href="https://t.me/SolanaMax_SMAX" target="_blank">Telegram</a>
+            <a class="btn-ghost" href="https://x.com/solanamax_smax" target="_blank">X (Twitter)</a>
+          </div>
+
+          <div class="section">
+            <h3>Quick Links</h3>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+              <a id="explorer" class="btn-ghost" href="#" target="_blank">View on Explorer</a>
+              <a id="jupiter" class="btn-ghost" href="#" target="_blank">Swap on Jupiter</a>
+              <a id="phantom" class="btn-ghost" href="#" target="_blank">Add to Phantom</a>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Token Summary</h3>
+            <p class="muted">Total supply: <strong id="supply">1,000,000,000 SMAX</strong></p>
+
+            <div class="tokenomics-grid" style="margin-top:10px">
+              <div class="card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)">
+                <strong>Team</strong><div class="muted">25% — vested (6 months)</div>
+              </div>
+              <div class="card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)">
+                <strong>Liquidity</strong><div class="muted">40% — locked</div>
+              </div>
+              <div class="card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)">
+                <strong>Community</strong><div class="muted">20% — rewards & airdrops</div>
+              </div>
+              <div class="card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)">
+                <strong>Dev & Partnerships</strong><div class="muted">15% — multisig & timelock</div>
+              </div>
+            </div>
+            <p class="muted" style="margin-top:10px">Detailed vesting & release schedule is defined in the tokenomics section below.</p>
+          </div>
+
+          <div class="section">
+            <h3>Roadmap</h3>
+            <ol class="muted">
+              <li>Phase 0 — Local and Devnet tests (complete)</li>
+              <li>Phase 1 — Tokenomics finalization & security review</li>
+              <li>Phase 2 — Liquidity lock & Mainnet launch</li>
+              <li>Phase 3 — Listings, staking, governance</li>
+            </ol>
+          </div>
         </div>
-    </div>
-</div>
 
-<div class="container">
-    <div class="section">
-        <h2>🔒 Max Security: The Trust Pledge</h2>
-        <p>The SMAX project is built on three key principles to ensure investor safety and long-term value:</p>
-        <ul>
-            <li><strong>100% LP Burn:</strong> Initial liquidity pool tokens are <strong>100% sent to the irreversible Burn Address</strong> post-launch. This eliminates the risk of "Rug Pulls." (Burn Transaction Link Here)</li>
-            <li><strong>Immutable Contract:</strong> The token contract, built on SPL Token-2022, is immutable. The <strong>Mint Authority is permanently revoked.</strong> No new tokens can ever be created.</li>
-            <li><strong>Transparent Team Allocation:</strong> The 25% team token allocation will be locked and vested over a specified period [e.g., 6 months] to ensure commitment.</li>
-        </ul>
+        <div class="card section">
+          <h3>Whitepaper</h3>
+          <p class="muted">The whitepaper explains the vision, tokenomics and governance. Download the current draft or ask for a professional rewrite.</p>
+          <div style="margin-top:8px">
+            <a class="btn-ghost" href="whitepaper.pdf" target="_blank">Download Whitepaper (PDF)</a>
+            <a class="btn-ghost" href="https://solanasmax.github.io/smax/" target="_blank">Open Official Site</a>
+          </div>
+        </div>
+      </main>
+
+      <!-- RIGHT -->
+      <aside>
+        <div class="card">
+          <h3>Mint Address</h3>
+          <p id="mint" style="word-break:break-all">6cCKcMwBRWdAoA9tUA6mDqwtP4N6a4hRECFtWjnYzcAe</p>
+          <p class="muted">Network: <strong>Local / Devnet (test)</strong></p>
+          <div style="margin-top:10px;display:flex;gap:8px">
+            <button class="btn" onclick="copyMint()">Copy</button>
+            <button class="btn-ghost" onclick="openExplorer()">Open Explorer</button>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h3>Tokenomics (detailed)</h3>
+          <ul class="muted">
+            <li>Total supply: <strong>1,000,000,000 SMAX</strong></li>
+            <li>Team (25%): 250,000,000 — 1 month cliff, then linear monthly unlock over 5 months</li>
+            <li>Liquidity (40%): 400,000,000 — LP locked (recommend 12 months)</li>
+            <li>Community (20%): 200,000,000 — airdrops & staking rewards</li>
+            <li>Dev & Partnerships (15%): 150,000,000 — multisig & milestone-based release</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Anti-bot & Anti-dump</h3>
+          <ul class="muted">
+            <li>Team vesting & cliff to prevent dumps</li>
+            <li>Locked LP (third-party or multisig)</li>
+            <li>Initial per-wallet caps & whitelist for TGE</li>
+            <li>Optional on-chain cooldown & anti-whale limits</li>
+          </ul>
+        </div>
+      </aside>
     </div>
 
-    <div class="section dark">
-        <h2>📊 SMAX Tokenomics: 100 Billion Supply</h2>
-        <p>The total supply of SMAX is One Hundred Billion (100,000,000,000) tokens. Our deflationary model is designed for sustained growth:</p>
-        <ul>
-            <li><strong>1% Transaction Tax (Buyback & Burn):</strong> A 1% tax on every transaction is used for market buybacks and subsequent token burning, creating constant buying pressure and reducing circulating supply.</li>
-            <li><strong>50% Allocation:</strong> Initial Liquidity Pool (LP) - Burnt.</li>
-            <li><strong>25% Allocation:</strong> Team / Taxes - Locked/Vested.</li>
-            <li><strong>25% Allocation:</strong> Treasury Reserve - For future airdrops, marketing, and ecosystem growth.</li>
-        </ul>
-    </div>
+    <footer>
+      © Solana Max — SMAX · Built for the community · <span class="muted">Website: solanasmax.github.io/smax</span>
+    </footer>
+  </div>
 
-    <div class="section">
-        <h2>🗺️ Roadmap to the Max</h2>
-        <p>Our phased plan to establish SMAX as a premier DeFi utility token on the Solana network:</p>
-        <ol>
-            <li><strong>Phase 1: Secure Launch</strong> - Token creation, LP burn, website launch, official Whitepaper release, social media presence.</li>
-            <li><strong>Phase 2: Market Integration</strong> - Application for listing on CoinGecko & CoinMarketCap, influencer campaigns, and establishing key partnerships.</li>
-            <li><strong>Phase 3: Utility Development</strong> - Launching a simple staking dashboard or holder-gated utility (e.g., voting platform or simple trading tools).</li>
-            <li><strong>Phase 4: Max Ecosystem</strong> - Further decentralization and exploring integration with other Solana DeFi primitives.</li>
-        </ol>
-    </div>
-</div>
-
-<div class="footer">
-    <p>&copy; 2024 Solana Max. All rights reserved.</p>
-    <div class="social-links">
-        <a href="https://t.me/SolanaMax_SMAX" target="_blank">Telegram</a> | 
-        
-        <a href="https://x.com/solanamax_smax" target="_blank">Twitter (X)</a>
-    </div>
-</div>
+<script>
+  const MINT = "6cCKcMwBRWdAoA9tUA6mDqwtP4N6a4hRECFtWjnYzcAe";
+  function copyMint(){
+    if (navigator.clipboard) navigator.clipboard.writeText(MINT).then(()=>alert('Mint address copied'));
+    else alert(MINT);
+  }
+  function openExplorer(){
+    window.open('https://explorer.solana.com/address/'+MINT+'?cluster=devnet','_blank');
+  }
+  document.getElementById('jupiter')?.setAttribute('href','https://jup.ag/swap?inputCurrency=SOL&outputCurrency=' + MINT);
+  document.getElementById('explorer')?.setAttribute('href','https://explorer.solana.com/address/' + MINT + '?cluster=devnet');
+  document.getElementById('phantom')?.setAttribute('href','https://phantom.app/ul/add/' + MINT);
+</script>
 </body>
 </html>
