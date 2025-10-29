@@ -1,25 +1,33 @@
 {
   "name": "Solana Max",
   "symbol": "SMAX",
-  "description": "Solana Max ($SMAX) is a community-driven project on the Solana blockchain.\n\nOfficial Links:\nWebsite: https://solanasmax.github.io/smax/\nTwitter: https://x.com/solanamax_smax\nTelegram: https://t.me/SolanaMax_SMAX",
+  "description": "Solana Max ($SMAX) — a fair-launch Solana token designed to prevent price manipulation and promote long-term stability. Early trading follows a 2% daily purchase limit per wallet, with exchange exemptions and owner flexibility to remove limits when stable.",
   "image": "https://raw.githubusercontent.com/solanasmax/smax/main/banner.png",
   "external_url": "https://solanasmax.github.io/smax/",
   "attributes": [
-    { "trait_type": "Category", "value": "Utility Token" },
-    { "trait_type": "Network", "value": "Solana Mainnet" },
-    { "trait_type": "Total Supply", "value": "1,000,000,000 SMAX" }
+    { "trait_type": "Fair Launch Rule", "value": "Max 2% daily buy per wallet" },
+    { "trait_type": "Exchanges Whitelist", "value": "Exempt from daily limits" },
+    { "trait_type": "Anti-Dump Policy", "value": "Active during early trading phase" },
+    { "trait_type": "Rule Deactivation", "value": "Owner can disable restrictions post-stabilization" }
   ],
   "properties": {
+    "tokenomics": {
+      "public_supply": "60%",
+      "team": "25%",
+      "marketing_treasury": "8%",
+      "liquidity_pool": "5%",
+      "burn_reserve": "2%"
+    },
+    "rules": {
+      "daily_limit_percent": 2,
+      "whitelist_editable": true,
+      "enforcement_type": "Off-chain documented (Phase 1)",
+      "onchain_upgrade_ready": true
+    },
     "files": [
       {
         "uri": "https://raw.githubusercontent.com/solanasmax/smax/main/banner.png",
         "type": "image/png"
-      }
-    ],
-    "creators": [
-      {
-        "address": "nPwQfdLkTA7aGmD8x1mJdpYV8NxfpMzCik7ZuMYSCgb",
-        "share": 100
       }
     ]
   }
