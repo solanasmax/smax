@@ -1,27 +1,21 @@
 {
   "name": "Solana Max",
   "symbol": "SMAX",
-  "description": "Solana Max ($SMAX) — A community-driven token built on the Solana blockchain. Designed for transparency, fair launch, and strong anti-whale protection.",
-  "image": "https://solanasmax.github.io/smax/logo.png",
-  "banner": "https://solanasmax.github.io/smax/banner.png",
+  "description": "Solana Max ($SMAX) is a community-driven project on the Solana blockchain.\n\nOfficial Links:\nWebsite: https://solanasmax.github.io/smax/\nTwitter: https://x.com/solanamax_smax\nTelegram: https://t.me/SolanaMax_SMAX",
+  "image": "https://raw.githubusercontent.com/solanasmax/smax/main/banner.png",
   "external_url": "https://solanasmax.github.io/smax/",
   "attributes": [
+    { "trait_type": "Category", "value": "Utility Token" },
     { "trait_type": "Network", "value": "Solana Mainnet" },
-    { "trait_type": "Total Supply", "value": "1,000,000,000 SMAX" },
-    { "trait_type": "Decimals", "value": "9" },
-    { "trait_type": "Launch", "value": "Community Driven" },
-    { "trait_type": "Anti-Whale Rule", "value": "Max 2% per transaction" }
+    { "trait_type": "Total Supply", "value": "1,000,000,000 SMAX" }
   ],
-  "collection": {
-    "name": "Solana Max Ecosystem",
-    "family": "Solana Projects"
-  },
   "properties": {
     "files": [
-      { "uri": "https://solanasmax.github.io/smax/logo.png", "type": "image/png" },
-      { "uri": "https://solanasmax.github.io/smax/banner.png", "type": "image/png" }
+      {
+        "uri": "https://raw.githubusercontent.com/solanasmax/smax/main/banner.png",
+        "type": "image/png"
+      }
     ],
-    "category": "token",
     "creators": [
       {
         "address": "nPwQfdLkTA7aGmD8x1mJdpYV8NxfpMzCik7ZuMYSCgb",
