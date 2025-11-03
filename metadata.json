@@ -1,14 +1,16 @@
 {
   "name": "Solana Max",
   "symbol": "SMAX",
-  "description": "Solana Max ($SMAX) — a fair-launch Solana token designed to prevent price manipulation and promote long-term stability. Early trading follows a 2% daily purchase limit per wallet, with exchange exemptions and owner flexibility to remove limits when stable.",
+  "description": "Solana Max ($SMAX) — a fair-launch Solana token designed to prevent price manipulation and promote long-term stability. Early trading follows a 2% daily purchase limit per wallet, with exchange exemptions and owner flexibility to remove limits once the market stabilizes.",
   "image": "https://raw.githubusercontent.com/solanasmax/smax/main/banner.png",
   "external_url": "https://solanasmax.github.io/smax/",
   "attributes": [
     { "trait_type": "Fair Launch Rule", "value": "Max 2% daily buy per wallet" },
     { "trait_type": "Exchanges Whitelist", "value": "Exempt from daily limits" },
-    { "trait_type": "Anti-Dump Policy", "value": "Active during early trading phase" },
-    { "trait_type": "Rule Deactivation", "value": "Owner can disable restrictions post-stabilization" }
+    { "trait_type": "Anti-Dump Policy", "value": "Active during first 7 days post-launch" },
+    { "trait_type": "Whitelist Control", "value": "Admin editable whitelist for exchanges" },
+    { "trait_type": "Vesting", "value": "25% team allocation vested over 3 months" },
+    { "trait_type": "Rule Deactivation", "value": "Owner can disable restrictions after stability phase" }
   ],
   "properties": {
     "tokenomics": {
@@ -19,16 +21,35 @@
       "burn_reserve": "2%"
     },
     "rules": {
-      "daily_limit_percent": 2,
+      "initial_buy_limit": "2% per wallet (non-exchange)",
+      "limit_duration": "7 days after launch",
       "whitelist_editable": true,
-      "enforcement_type": "Off-chain documented (Phase 1)",
+      "exchanges_exempt": true,
       "onchain_upgrade_ready": true
+    },
+    "links": {
+      "website": "https://solanasmax.github.io/smax/",
+      "whitepaper": "https://solanasmax.github.io/smax/whitepaper.pdf",
+      "telegram": "https://t.me/solanasmax",
+      "twitter": "https://twitter.com/solanasmax",
     },
     "files": [
       {
         "uri": "https://raw.githubusercontent.com/solanasmax/smax/main/banner.png",
         "type": "image/png"
+      },
+      {
+        "uri": "https://solanasmax.github.io/smax/whitepaper.pdf",
+        "type": "application/pdf"
       }
     ]
+  },
+  "collection": {
+    "name": "SolanaMax Ecosystem",
+    "family": "Solana Projects"
+  },
+  "creator": {
+    "name": "SolanaMax Dev Team",
+    "address": "nPwQfdLkTA7aGmD8x1mJdpYV8NxfpMzCik7ZuMYSCgb"
   }
 }
