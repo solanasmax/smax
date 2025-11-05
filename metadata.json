@@ -5,7 +5,7 @@
   "image": "https://raw.githubusercontent.com/solanasmax/smax/main/banner.png",
   "external_url": "https://solanasmax.github.io/smax/",
   "attributes": [
-    { "trait_type": "Fair Launch Rule", "value": "Max 2% daily buy per wallet" },
+    { "trait_type": "Fair Launch Rule", "value": "Max 1% daily buy per wallet" },
     { "trait_type": "Exchanges Whitelist", "value": "Exempt from daily limits" },
     { "trait_type": "Anti-Dump Policy", "value": "Active during first 7 days post-launch" },
     { "trait_type": "Whitelist Control", "value": "Admin editable whitelist for exchanges" },
@@ -54,4 +54,5 @@
     "address": "nPwQfdLkTA7aGmD8x1mJdpYV8NxfpMzCik7ZuMYSCgb"
   }
 }
+
 
