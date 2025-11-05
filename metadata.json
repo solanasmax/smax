@@ -4,6 +4,7 @@
   "description": "Solana Max ($SMAX) — a fair-launch Solana token designed to prevent price manipulation and promote long-term stability. Early trading follows a 1% daily purchase limit per wallet, with exchange exemptions and owner flexibility to remove limits once the market stabilizes.",
   "image": "https://raw.githubusercontent.com/solanasmax/smax/main/banner.png",
   "external_url": "https://solanasmax.github.io/smax/",
+  "seller_fee_basis_points": 0,
   "attributes": [
     { "trait_type": "Fair Launch Rule", "value": "Max 1% daily buy per wallet" },
     { "trait_type": "Exchanges Whitelist", "value": "Exempt from daily limits" },
@@ -13,6 +14,12 @@
     { "trait_type": "Rule Deactivation", "value": "Owner can disable restrictions after stability phase" }
   ],
   "properties": {
+    "creators": [
+      {
+        "address": "nPwQfdLkTA7aGmD8x1mJdpYV8NxfpMzCik7ZuMYSCgb",
+        "share": 100
+      }
+    ],
     "tokenomics": {
       "public_supply": "60%",
       "team": "25%",
@@ -48,9 +55,5 @@
   "collection": {
     "name": "SolanaMax Ecosystem",
     "family": "Solana Projects"
-  },
-  "creator": {
-    "name": "SolanaMax Dev Team",
-    "address": "nPwQfdLkTA7aGmD8x1mJdpYV8NxfpMzCik7ZuMYSCgb"
   }
 }
