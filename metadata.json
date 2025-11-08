@@ -1,5 +1,5 @@
 {
-  "name": "Solana Max",
+  "name": "SolanaMax",
   "symbol": "SMAX",
   "description": "Solana Max ($SMAX) — a fair-launch Solana token designed to prevent price manipulation and promote long-term stability. Early trading follows a 1% daily purchase limit per wallet, with exchange exemptions and owner flexibility to remove limits once the market stabilizes.",
   "image": "https://raw.githubusercontent.com/solanasmax/smax/main/banner.png",
@@ -11,22 +11,23 @@
     { "trait_type": "Anti-Dump Policy", "value": "Active during first 7 days post-launch" },
     { "trait_type": "Whitelist Control", "value": "Admin editable whitelist for exchanges" },
     { "trait_type": "Vesting", "value": "25% team allocation vested over 3 months" },
-    { "trait_type": "Rule Deactivation", "value": "Owner can disable restrictions after stability phase" }
+    { "trait_type": "Rule Deactivation", "value": "Owner can disable restrictions after stability phase" },
+    { "trait_type": "Public Supply", "value": "60%" },
+    { "trait_type": "Team", "value": "25%" },
+    { "trait_type": "Marketing Treasury", "value": "8%" },
+    { "trait_type": "Liquidity Pool", "value": "5%" },
+    { "trait_type": "Burn Reserve", "value": "2%" }
   ],
   "properties": {
+    "name": "SolanaMax",
+    "symbol": "SMAX",
+    "category": "token",
     "creators": [
       {
         "address": "nPwQfdLkTA7aGmD8x1mJdpYV8NxfpMzCik7ZuMYSCgb",
         "share": 100
       }
     ],
-    "tokenomics": {
-      "public_supply": "60%",
-      "team": "25%",
-      "marketing_treasury": "8%",
-      "liquidity_pool": "5%",
-      "burn_reserve": "2%"
-    },
     "rules": {
       "initial_buy_limit": "1% per wallet (non-exchange)",
       "limit_duration": "7 days after launch",
