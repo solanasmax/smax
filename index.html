@@ -3,11 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Solana Max ($SMAX) – A next-gen community-driven project on the Solana blockchain." />
   <title>Solana Max | $SMAX</title>
+  <meta name="description" content="Solana Max ($SMAX) — A next-generation Solana community token designed for fair growth, transparency, and innovation." />
   <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- ✅ Social & SEO Metadata -->
+  <meta property="og:title" content="Solana Max ($SMAX)" />
+  <meta property="og:description" content="Join the next-generation Solana token — fair launch, transparent growth, and community power." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/solanasmax/smax/main/banner.png" />
+  <meta property="og:url" content="https://solanasmax.github.io/smax/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Solana Max ($SMAX)" />
+  <meta name="twitter:description" content="The official Solana Max ($SMAX) — powering decentralized growth on Solana." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/solanasmax/smax/main/banner.png" />
+
+  <!-- ✅ Fonts & Styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600&display=swap');
     * {margin:0;padding:0;box-sizing:border-box;}
     body {
       font-family: 'Poppins', sans-serif;
@@ -21,15 +33,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.4);
     }
     header img {
-      height: 60px;
+      height: 58px;
     }
     nav a {
       color: #fff;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0 18px;
       font-weight: 600;
       transition: color 0.3s;
     }
@@ -44,19 +56,19 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #fff;
       text-shadow: 0 2px 20px rgba(0,0,0,0.7);
     }
     .banner h1 {
-      font-size: 3.5em;
+      font-size: 3.2em;
       font-family: 'Orbitron', sans-serif;
+      color: #fff;
     }
     .section {
-      padding: 60px 10%;
+      padding: 70px 10%;
     }
     .section h2 {
       text-align: center;
-      font-size: 2.2em;
+      font-size: 2.3em;
       margin-bottom: 30px;
       background: linear-gradient(90deg, #3a86ff, #ff006e);
       -webkit-background-clip: text;
@@ -73,7 +85,7 @@
     .tokenomics {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
+      gap: 25px;
       margin-top: 40px;
     }
     .card {
@@ -95,15 +107,16 @@
     }
     .card p {
       color: #bbb;
+      font-size: 0.95em;
     }
-    .socials {
+    .cta {
       text-align: center;
       margin-top: 40px;
     }
-    .socials a {
+    .cta a {
       display: inline-block;
-      margin: 0 10px;
-      padding: 10px 20px;
+      margin: 10px;
+      padding: 12px 25px;
       border-radius: 30px;
       font-weight: 600;
       text-decoration: none;
@@ -111,7 +124,7 @@
       color: #fff;
       transition: all 0.3s ease;
     }
-    .socials a:hover {
+    .cta a:hover {
       background: linear-gradient(90deg, #ff006e, #ffd60a);
       transform: scale(1.05);
     }
@@ -145,10 +158,14 @@
   <section id="about" class="section">
     <h2>About Solana Max</h2>
     <p class="about">
-      <strong>Solana Max ($SMAX)</strong> is a next-generation community-driven token built on the lightning-fast <strong>Solana blockchain</strong>.
-      Designed for scalability, transparency, and long-term growth, $SMAX empowers a new wave of decentralized innovation
-      while rewarding loyal holders with sustainable tokenomics and real-world utility.
+      <strong>Solana Max ($SMAX)</strong> is a fair-launch community token built on the <strong>Solana blockchain</strong>,
+      designed to empower decentralized growth, promote transparency, and build sustainable market strength.
+      With fast transactions, low fees, and a passionate community, Solana Max represents a new wave of Web3 innovation.
     </p>
+    <div class="cta">
+      <a href="https://solscan.io/token/9tz2zqrek4vfim7DCoqQcZzKsvY4PQzHbqsT4JXez2Ka" target="_blank">View on Solscan</a>
+      <a href="https://solanasmax.github.io/smax/whitepaper.pdf" target="_blank">📄 Whitepaper</a>
+    </div>
   </section>
 
   <section id="tokenomics" class="section">
@@ -159,35 +176,31 @@
         <p>1,000,000,000 SMAX</p>
       </div>
       <div class="card">
+        <h3>Public Supply</h3>
+        <p>60% open circulation</p>
+      </div>
+      <div class="card">
         <h3>Team Allocation</h3>
-        <p>25% locked – vesting over 6 months</p>
+        <p>25% vested over 3 months</p>
       </div>
       <div class="card">
-        <h3>Community Rewards</h3>
-        <p>35% reserved for staking, airdrops, and community growth</p>
+        <h3>Marketing & Treasury</h3>
+        <p>8% for promotions and ecosystem growth</p>
       </div>
       <div class="card">
-        <h3>Liquidity & Partnerships</h3>
-        <p>25% allocated to exchanges and liquidity pools</p>
+        <h3>Liquidity Pool</h3>
+        <p>5% initial liquidity reserve</p>
       </div>
       <div class="card">
-        <h3>Reserve & Development</h3>
-        <p>15% dedicated to future innovation and ecosystem expansion</p>
+        <h3>Burn Reserve</h3>
+        <p>2% for supply reduction and deflation events</p>
       </div>
     </div>
   </section>
 
-  <section id="whitepaper" class="section">
-    <h2>Whitepaper</h2>
-    <p class="about">
-      Dive into the full technical and economic details of Solana Max.<br>
-      <a href="whitepaper.pdf" class="socials" target="_blank">📄 Read Whitepaper</a>
-    </p>
-  </section>
-
   <section id="community" class="section">
     <h2>Join the Community</h2>
-    <div class="socials">
+    <div class="cta">
       <a href="https://x.com/solanamax_smax" target="_blank">🐦 Twitter</a>
       <a href="https://t.me/SolanaMax_SMAX" target="_blank">💬 Telegram</a>
       <a href="https://solanasmax.github.io/smax/" target="_blank">🌐 Website</a>
@@ -195,7 +208,7 @@
   </section>
 
   <footer>
-    © 2025 Solana Max Core Team – All Rights Reserved
+    © 2025 Solana Max Core Team — All Rights Reserved
   </footer>
 </body>
 </html>
