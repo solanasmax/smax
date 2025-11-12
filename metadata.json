@@ -1,7 +1,7 @@
 {
   "name": "SolanaMax",
   "symbol": "SMAX",
-  "description": "Solana Max ($SMAX) — a fair-launch Solana token designed to prevent price manipulation and promote long-term stability. Early trading follows a 1% daily purchase limit per wallet, with exchange exemptions and owner flexibility to remove limits once the market stabilizes.",
+  "description": "SolanaMax ($SMAX) — a fair-launch Solana token designed to prevent price manipulation and promote long-term stability. Early trading follows a 1% daily purchase limit per wallet, with exchange exemptions and owner flexibility to remove limits once the market stabilizes.",
   "image": "https://raw.githubusercontent.com/solanasmax/smax/main/banner.png",
   "external_url": "https://solanasmax.github.io/smax/",
   "seller_fee_basis_points": 0,
@@ -58,3 +58,4 @@
     "family": "Solana Projects"
   }
 }
+
